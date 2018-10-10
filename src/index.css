@@ -37,6 +37,8 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  border-radius: 8px;
+  font-size: 15px;
 }
 
 button {
@@ -56,4 +58,12 @@ button:hover {
 span.psw {
   float: right;
   padding-top: 16px;
+}
+
+.hidden { display:none; }
+
+.searchContainer{
+  padding: 16px;
+  width: 30%;
+  float: left;
 }
