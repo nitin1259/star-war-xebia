@@ -64,6 +64,25 @@ span.psw {
 
 .searchContainer{
   padding: 16px;
-  width: 30%;
-  float: left;
+  width: 40%;
+  margin: auto;
+  float: center;
+}
+.planetRow{
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #eee;
+  margin: auto
+  
+}
+
+.navBtn{
+  background-color: #4CAF50;
+}
+
+.innerRowDiv{
+  width: 20%;
 }

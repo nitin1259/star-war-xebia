@@ -2,7 +2,7 @@ const appState = {
     isLoading: true,
     hasError: false,
     people: {},
-    planets: []
+    results: []
 }
 
 const starWarRecords = (state = appState, action) => {
@@ -14,8 +14,8 @@ const starWarRecords = (state = appState, action) => {
             return Object.assign({}, state, { hasError: action.hasError });
         case 'PEOPLE_RECORD':
             return Object.assign({}, state, { people: action.people });
-        case 'PLANET_SEARCH_RECORDS':
-            return Object.assign({}, state, { planets: action.planets });
+        case 'SEARCH_RECORDS':
+            return Object.assign({}, state, { results: action.results });
         default:
             return state;
 

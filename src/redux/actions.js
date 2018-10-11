@@ -1,3 +1,5 @@
+import { getRequest } from "../api/api-requests";
+
 export const isPlanetLoading = (bool) => {
     return {
         type: 'PLANET_IS_LOADING',
@@ -20,9 +22,26 @@ export const fetchPeopleData = (people) => {
     }
 }
 
-export const fetchPlanetsDetail = (planets) => {
+export const fetchSearchDetail = (results) => {
     return{
-        type: 'PLANET_SEARCH_RECORDS',
-        planets
+        type: 'SEARCH_RECORDS',
+        results
     }
+}
+
+export const fetchDataFromApi =(url) =>{
+    // console.log('url is: ' + url)
+    return (dispatch) =>{
+        dispatch(isPlanetLoading(true));
+
+        getRequest(url).then(res=>{
+            dispatch(isPlanetLoading(false))
+            return res;
+        }).then(results =>{
+            dispatch(fetchSearchDetail(results));
+        }).catch(()=>{
+            dispatch(planetHasError(true));
+        })
+    }
+
 }
