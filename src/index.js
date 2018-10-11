@@ -17,6 +17,7 @@ ReactDOM.render(
             <div>
                 <Home />
                 <Switch>
+                    <Route path="/" component={Login} exact />
                     <Route path="/login" component={Login} />
                     <Route path="/search" component={SearchPlanet} />
                 </Switch>
