@@ -62,6 +62,14 @@ span.psw {
 
 .hidden { display:none; }
 
+.navHeader{
+  padding: 16px;
+  width: 40%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
 .searchContainer{
   padding: 16px;
   width: 40%;
@@ -85,4 +93,14 @@ span.psw {
 
 .innerRowDiv{
   width: 20%;
+}
+
+.innerRowDivheader{
+  width: 20%;
+  font-weight: bolder;
+}
+
+.populatedDiv{
+  border: 2px solid rgb(31, 30, 30); 
+  background-color: rgb(241, 153, 153);
 }

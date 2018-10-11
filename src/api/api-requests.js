@@ -3,7 +3,7 @@ export const getRequest = async (url) => {
         return handleResponse(res)
     }).catch(err => {
         console.log(`${url} ${err.statusText}` + err);
-        alert(`${url} ${err.statusText}`);
+        alert(`${url} : ${err.statusText}`);
     })
     return data;
 }

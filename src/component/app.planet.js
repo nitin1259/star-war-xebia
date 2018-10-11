@@ -11,8 +11,10 @@ class Planet extends Component {
     }
 
     displayPlanet(planets) {
+        
         return planets.map((ele, i) => {
-            return (<div className="planetRow" key={i}>
+            const classes = ele.population > 1000000000 ? 'planetRow populatedDiv': 'planetRow'
+            return (<div className={classes} key={i}>
                 <div className="innerRowDiv">{ele.name}</div>
                 <div className="innerRowDiv">{ele.rotation_period}</div>
                 <div className="innerRowDiv">{ele.diameter}</div>
@@ -32,11 +34,11 @@ class Planet extends Component {
         return (
             <div>
                 <div className="planetRow">
-                    <div className="innerRowDiv">Name</div>
-                    <div className="innerRowDiv">Rotation Period</div>
-                    <div className="innerRowDiv">Diameter</div>
-                    <div className="innerRowDiv">Population</div>
-                    <div className="innerRowDiv">Where to find</div>
+                    <div className="innerRowDivheader">Name</div>
+                    <div className="innerRowDivheader">Rotation Period</div>
+                    <div className="innerRowDivheader">Diameter</div>
+                    <div className="innerRowDivheader">Population</div>
+                    <div className="innerRowDivheader">Where to find</div>
                 </div>
                 {this.displayPlanet(planets)}
 

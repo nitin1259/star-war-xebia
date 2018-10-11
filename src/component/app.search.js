@@ -31,7 +31,7 @@ class SearchPlanet extends Component {
         }
         else if (this.props.starWarRecords.hasError) {
             return (<div className="planetRow">Error while searching...</div>)
-        } else if (this.props.starWarRecords.results.results){
+        } else if (this.props.starWarRecords.results && this.props.starWarRecords.results.results){
             return (<div>
                 <Planet />
             </div>)
